@@ -3,6 +3,8 @@
 @import "parts/extendtions";
 @import "components/mixins";
 
+// header start
+
 // red alert pop
 .alert {
   border: 0 !important;
@@ -45,6 +47,7 @@
 }
 // black conact-login menu
 .alert-dark {
+  margin: 0 !important;
   background-color: $darken !important;
   padding: 0 !important;
   .info-contact {
@@ -60,8 +63,8 @@
           font-size: 14px;
           @include transition(all 0.4s);
         }
-        span:hover{
-            color: $primary-color;
+        span:hover {
+          color: $primary-color;
         }
         i {
           margin-right: 5px;
@@ -70,8 +73,8 @@
           font-size: 18px;
           @include transition(all 0.4s);
         }
-        i:hover{
-            color: $primary-color;
+        i:hover {
+          color: $primary-color;
         }
       }
     }
@@ -136,3 +139,47 @@
 }
 // end of the contact-login menu
 
+.sticky-menu-nav {
+  .dropdown-search-area {
+    .dropdown-items{
+      position: relative;
+      margin-right: 11px;
+    }
+    .dropdown-items a:after{
+      border: 0 none;
+    font-family: "FontAwesome";
+    content: "\f107";
+    height: auto;
+    line-height: normal;
+    margin-left: 5px;
+    vertical-align: middle;
+    width: auto;
+    position: absolute;
+    font-size: 16px;
+    right: -5px;
+    top: 18px;
+    }
+    justify-content: flex-end;
+    li {
+      a {
+        color: $primary-black-color !important;
+        font-weight: 600;
+        font-family: $subheading-font;
+        text-transform: uppercase;
+        padding: 14px;
+        font-size: 14px;
+      }
+    }
+    .search-area {
+      padding: 0;
+      margin-bottom: 0px;
+      list-style: none;
+      li {
+        i {
+          color: $primary-secondBlack;
+          font-size: 16px;
+        }
+      }
+    }
+  }
+}
