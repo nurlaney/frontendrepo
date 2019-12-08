@@ -53,6 +53,7 @@
   .info-contact {
     list-style: none;
     margin-bottom: 0;
+    padding: 14px;
     li {
       display: inline-block;
       margin-right: 10px;
@@ -62,6 +63,7 @@
           color: $white;
           font-size: 14px;
           @include transition(all 0.4s);
+          font-family: $subheading-font;
         }
         span:hover {
           color: $primary-color;
@@ -140,45 +142,47 @@
 // end of the contact-login menu
 
 .sticky-menu-nav {
-  .dropdown-search-area {
-    .dropdown-items{
-      position: relative;
-      margin-right: 11px;
-    }
-    .dropdown-items a:after{
-      border: 0 none;
-    font-family: "FontAwesome";
-    content: "\f107";
-    height: auto;
-    line-height: normal;
-    margin-left: 5px;
-    vertical-align: middle;
-    width: auto;
-    position: absolute;
-    font-size: 16px;
-    right: -5px;
-    top: 18px;
-    }
-    justify-content: flex-end;
-    li {
-      a {
-        color: $primary-black-color !important;
-        font-weight: 600;
-        font-family: $subheading-font;
-        text-transform: uppercase;
-        padding: 14px;
-        font-size: 14px;
+  .collapse {
+    .search-area{
+      padding: 0;
+      list-style: none;
+      margin-top: 17px;
+      margin-left: 10px;
+      i{
+        color: $primary-secondBlack;
       }
     }
-    .search-area {
-      padding: 0;
-      margin-bottom: 0px;
-      list-style: none;
-      li {
-        i {
-          color: $primary-secondBlack;
-          font-size: 16px;
-        }
+    .nav-item{
+      .nav-link{
+        color: $primary-black-color;
+        font-weight: 600;
+        font-size: 14px;
+        font-family: $subheading-font;
+        text-transform: uppercase;
+      }
+    }
+    .dropdown {
+      margin-right: 19px;
+      .nav-link {
+        color: $primary-black-color;
+        font-weight: 600;
+        font-size: 14px;
+        font-family: $subheading-font;
+        text-transform: uppercase;
+      }
+      .dropdown-toggle::after{
+        border: 0 none;
+        font-family: "FontAwesome";
+         content: "\f107";
+         height: auto;
+         line-height: normal;
+         margin-left: 5px;
+         vertical-align: middle;
+         width: auto;
+         position: absolute;
+         font-size: 16px;
+         right: -6px;
+         top: 12px;
       }
     }
   }
