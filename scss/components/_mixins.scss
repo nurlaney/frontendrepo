@@ -1,0 +1,5 @@
+@mixin transition($propert){
+    transition: $propert;
+    -webkit-transition: $propert;
+    -moz-transition: $propert;
+}
