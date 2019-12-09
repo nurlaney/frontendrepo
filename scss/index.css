@@ -1,3 +1,7 @@
+body {
+  background-color: #fff;
+}
+
 .alert {
   border: 0 !important;
   border-radius: 0 !important;
@@ -55,7 +59,7 @@
 .alert-dark .info-contact {
   list-style: none;
   margin-bottom: 0;
-  padding: 14px;
+  padding: 14px 0;
 }
 
 .alert-dark .info-contact li {
@@ -165,6 +169,10 @@
   background-color: #eee;
 }
 
+.sticky-menu-nav .navbar {
+  padding: 0 0;
+}
+
 .sticky-menu-nav .collapse .search-area {
   padding: 0;
   list-style: none;
@@ -176,23 +184,88 @@
   color: #888888;
 }
 
+.sticky-menu-nav .collapse .search-area .search-pop {
+  position: absolute;
+  padding: 22px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  right: 0;
+  top: 70px;
+  visibility: hidden;
+  opacity: 0;
+}
+
+.sticky-menu-nav .collapse .search-area .search-pop .search-bar {
+  position: relative;
+  min-width: 268px;
+}
+
+.sticky-menu-nav .collapse .search-area .search-pop .search-bar i {
+  position: absolute;
+  right: 10px;
+  top: 8px;
+  font-size: 22px;
+}
+
+.sticky-menu-nav .collapse .nav-item {
+  padding: 17px 0;
+}
+
 .sticky-menu-nav .collapse .nav-item .nav-link {
   color: #292b2c;
   font-weight: 600;
   font-size: 14px;
   font-family: "Roboto", sans-serif;
   text-transform: uppercase;
+  transition: all 0.4s;
+  -webkit-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+}
+
+.sticky-menu-nav .collapse .nav-item .nav-link:hover {
+  color: #FFBC09;
 }
 
 .sticky-menu-nav .collapse .dropdown {
   margin-right: 19px;
 }
 
+.sticky-menu-nav .collapse .dropdown .dropdown-menu {
+  margin-top: -1px;
+  background-color: #fff;
+  border-color: rgba(165, 161, 161, 0.17);
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-right: 65px;
+  border-radius: 0;
+}
+
+.sticky-menu-nav .collapse .dropdown .dropdown-menu .dropdown-item {
+  display: block;
+  width: 100%;
+  padding: 5px 6px;
+  font-weight: 400;
+  color: #292b2c;
+  text-align: inherit;
+  white-space: nowrap;
+  background-color: transparent;
+  border: 0;
+  font-family: sans-serif;
+  font-size: 14px;
+  transition: all 0.4s;
+  -webkit-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+}
+
+.sticky-menu-nav .collapse .dropdown .dropdown-menu .dropdown-item:hover {
+  color: #FFBC09;
+}
+
 .sticky-menu-nav .collapse .dropdown .nav-link {
   color: #292b2c;
   font-weight: 600;
   font-size: 14px;
-  font-family: "Roboto", sans-serif;
+  font-family: "Rubik", sans-serif;
   text-transform: uppercase;
 }
 
@@ -208,6 +281,6 @@
   position: absolute;
   font-size: 16px;
   right: -6px;
-  top: 12px;
+  bottom: 26px;
 }
 /*# sourceMappingURL=index.css.map */
