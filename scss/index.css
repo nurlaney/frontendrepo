@@ -1,3 +1,19 @@
+.text-red {
+  color: #F6475F !important;
+}
+
+.text-green {
+  color: #B3D369 !important;
+}
+
+.pr30 {
+  padding-right: 30px;
+}
+
+.m0 {
+  margin: 0;
+}
+
 .alert {
   border: 0 !important;
   border-radius: 0 !important;
@@ -764,5 +780,88 @@ body {
 #w-ch-eduglobal .reason-box .reason-s p {
   color: #888888;
   font-family: "Roboto", sans-serif;
+}
+
+#about-us-sect {
+  padding: 50px 0;
+  overflow: hidden;
+}
+
+#about-us-sect .aboutus-part {
+  padding: 54px;
+  border-radius: 0 200px 200px 0;
+  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  margin-right: -50px;
+  z-index: 1;
+  background-color: #fff;
+}
+
+#about-us-sect .aboutus-part .au-heading h2 {
+  font-family: "Rubik", sans-serif;
+  color: #292b2c;
+  margin-bottom: 16px;
+  font-size: 32px;
+  font-weight: 500;
+}
+
+#about-us-sect .aboutus-part p {
+  font-family: "Roboto", sans-serif;
+  color: #888888;
+}
+
+#about-us-sect .aboutus-part .counter-list li {
+  display: inline-block;
+}
+
+#about-us-sect .aboutus-part .counter-list li span {
+  font-size: 40px;
+  font-family: "Rubik", sans-serif;
+  line-height: 1.2;
+  font-weight: 500;
+  padding-bottom: 13px;
+}
+
+#about-us-sect .aboutus-part .counter-list li h6 {
+  font-family: "Rubik", sans-serif;
+  font-weight: 500;
+  margin-top: 7px;
+}
+
+#about-us-sect .image-part {
+  position: relative;
+  z-index: -1;
+}
+
+#about-us-sect .image-part::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  position: absolute;
+}
+
+#about-us-sect .image-part img {
+  z-index: -1;
+  width: 100%;
+}
+
+#about-us-sect .video-link {
+  display: inline-block;
+  color: #007bff;
+  text-decoration: none;
+  background-color: transparent;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
+
+#about-us-sect .video-link i {
+  position: absolute;
+  display: inline-block;
+  padding: 25px;
+  border-radius: 50%;
+  background-color: #fff;
+  color: #FFBC09;
 }
 /*# sourceMappingURL=index.css.map */
