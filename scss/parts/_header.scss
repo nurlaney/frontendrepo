@@ -1,0 +1,245 @@
+// header start
+
+// red alert pop
+.alert {
+    border: 0 !important;
+    border-radius: 0 !important;
+  }
+  .alert-danger {
+    background-color: $danger !important;
+    margin-bottom: 0 !important;
+    span {
+      color: $white;
+      font-family: $subheading-font;
+      font-size: 15px;
+      font-weight: 700;
+      line-height: 1.5;
+      a {
+        text-decoration: underline;
+        color: $white;
+      }
+    }
+    button {
+      background-color: $danger;
+      border: 0;
+      float: none;
+      vertical-align: middle;
+      span {
+        color: $white;
+        font-size: 24px;
+        font-weight: bold;
+        opacity: 0.5;
+        margin-left: 4px;
+        font-family: $subheading-font;
+        text-shadow: 0 1px 0 $white;
+        line-height: 0;
+        @include transition(all 0.3s);
+      }
+      span:hover {
+        opacity: 0.7;
+      }
+    }
+  }
+  // black conact-login menu
+  .alert-dark {
+    margin: 0 !important;
+    background-color: $darken !important;
+    padding: 0 !important;
+    .info-contact {
+      list-style: none;
+      margin-bottom: 0;
+      padding: 14px 0;
+      li {
+        display: inline-block;
+        margin-right: 10px;
+        a {
+          text-decoration: none;
+          span {
+            color: $white;
+            font-size: 14px;
+            @include transition(all 0.4s);
+            font-family: $subheading-font;
+          }
+          span:hover {
+            color: $primary-color;
+          }
+          i {
+            margin-right: 5px;
+            color: $white;
+            vertical-align: middle;
+            font-size: 18px;
+            @include transition(all 0.4s);
+          }
+          i:hover {
+            color: $primary-color;
+          }
+        }
+      }
+    }
+    .social-part {
+      align-items: flex-end;
+    }
+    .social-icons {
+      list-style: none;
+      display: inline;
+  
+      li {
+        display: inline;
+        margin-left: 20px;
+        i {
+          color: $white;
+          font-size: 13px;
+          @include transition(all 0.4s);
+        }
+        i:hover {
+          color: $primary-color;
+        }
+      }
+    }
+    .login-apply {
+      list-style: none;
+      display: inline;
+      position: relative;
+      top: 7px;
+      li {
+        display: inline;
+        a {
+          text-decoration: none;
+        }
+        span {
+          color: $white;
+          margin-right: 5px;
+          font-size: 15px;
+          @include transition(all 0.4s);
+        }
+        span:hover {
+          color: $primary-color;
+        }
+      }
+      li {
+        // button hoverini duzelt
+        button {
+          background-color: $primary-color !important;
+          border-color: $primary-color !important;
+        }
+      }
+    }
+    .login-apply:before {
+      content: "";
+      position: absolute;
+      left: 19px;
+      top: 7px;
+      height: 25px;
+      width: 1px;
+      background-color: #eee;
+    }
+  }
+  // end of the contact-login menu
+  .sticky-menu-nav {
+    .navbar {
+      padding: 0 0;
+    }
+    .collapse {
+      .search-area {
+        padding: 0;
+        list-style: none;
+        margin-top: 17px;
+        margin-left: 10px;
+       .icon {
+         color: $primary-secondBlack;
+         font-size: 20px;
+       }
+       .icon:hover{
+         color: $primary-color;
+       }
+        // klikde op1 burada
+        .search-pop {
+          position: absolute;
+          padding: 22px;
+          background-color: $white;
+          border: 1px solid #ddd;
+          right: 0;
+          top: 70px;
+          visibility: hidden;
+          opacity: 0;
+          z-index: 2;
+          .search-bar {
+            position: relative;
+            min-width: 268px;
+            i {
+              position: absolute;
+              right: 10px;
+              top: 8px;
+              font-size: 22px;
+              color: $primary-secondBlack;
+            }
+          }
+        }
+      }
+      .nav-item {
+        padding: 17px 0;
+        .nav-link {
+          color: $primary-black-color;
+          font-weight: 600;
+          font-size: 14px;
+          font-family: $subheading-font;
+          text-transform: uppercase;
+          @include transition(all 0.4s);
+        }
+        .nav-link:hover {
+          color: $primary-color;
+        }
+      }
+      .dropdown {
+        .dropdown-menu {
+          margin-top: -1px;
+          background-color: $white;
+          border-color: hsla(0, 2%, 64%, 0.17);
+          padding-top: 0;
+          padding-bottom: 0;
+          padding-right: 65px;
+          border-radius: 0;
+          .dropdown-item {
+            display: block;
+            width: 100%;
+            padding: 5px 6px;
+            font-weight: 400;
+            color: $primary-black-color;
+            text-align: inherit;
+            white-space: nowrap;
+            background-color: transparent;
+            border: 0;
+            font-family: sans-serif;
+            font-size: 14px;
+            @include transition(all 0.4s);
+          }
+          .dropdown-item:hover {
+            color: $primary-color;
+          }
+        }
+        margin-right: 19px;
+        .nav-link {
+          color: $primary-black-color;
+          font-weight: 600;
+          font-size: 14px;
+          font-family: $heading-font;
+          text-transform: uppercase;
+        }
+  
+        .dropdown-toggle::after {
+          border: 0 none;
+          font-family: "FontAwesome";
+          content: "\f107";
+          height: auto;
+          line-height: normal;
+          margin-left: 5px;
+          vertical-align: middle;
+          width: auto;
+          position: absolute;
+          font-size: 16px;
+          right: -6px;
+          bottom: 26px;
+        }
+      }
+    }
+  }
