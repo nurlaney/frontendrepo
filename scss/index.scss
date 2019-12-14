@@ -6,6 +6,7 @@
 
 body {
   background-color: $white;
+  font-family: $subheading-font;
 }
 // most popular cat.
 #mp-categories {
@@ -469,7 +470,6 @@ body {
   }
   .video-link {
     display: inline-block;
-    color: #007bff;
     text-decoration: none;
     background-color: transparent;
     position: absolute;
@@ -478,10 +478,388 @@ body {
     i {
       position: absolute;
       display: inline-block;
-      padding: 25px;
+      padding: 20px;
       border-radius: 50%;
       background-color: $white;
       color: $primary-color;
+    }
+  }
+}
+// our courses sect
+#our-courses-sect {
+  padding: 50px 0 100px 0;
+  .standart-headings {
+    h2 {
+      color: $primary-black-color;
+      font-family: $heading-font;
+      font-weight: 500;
+      line-height: 1.2;
+      margin-bottom: 16px;
+      font-size: 32px;
+    }
+    p {
+      color: $primary-secondBlack;
+      font-family: $subheading-font;
+    }
+  }
+  .course-box {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    background-color: $white;
+    border-radius: 10px;
+    margin-top: 30px;
+    overflow: hidden;
+    .course-img {
+      overflow: hidden;
+      @include transition(all 0.3s);
+      img {
+        width: 100%;
+        border-radius: 10px 10px 0 0;
+      }
+    }
+    .content-area {
+      padding: 15px;
+      h4 {
+        cursor: pointer;
+        color: $primary-black-color;
+        font-size: 18px;
+        font-family: $heading-font;
+        font-weight: 500;
+        @include transition(all 0.3s);
+      }
+      h4:hover {
+        color: $primary-color;
+      }
+      p {
+        margin-bottom: 10px;
+        color: $primary-secondBlack;
+        font-family: $subheading-font;
+        font-size: 16px;
+        font-weight: 400;
+        margin-bottom: 10px;
+      }
+      .rating-part {
+        .stars {
+          display: inline-block;
+          i {
+            color: $primary-color;
+            font-size: 13px;
+          }
+        }
+        .likes {
+          list-style: none;
+          float: right;
+          li {
+            display: inline;
+            i {
+              color: $primary-secondBlack;
+              @include transition(all 0.3s);
+            }
+            i:hover {
+              color: $primary-color;
+            }
+          }
+        }
+      }
+    }
+    .box-foot {
+      padding: 15px;
+      align-items: center;
+      justify-content: space-between;
+      display: flex;
+      margin: 1px;
+      border-top: 1px solid #ddd;
+      .foot-photo {
+        display: inline-block;
+        img {
+          max-width: 40px;
+          border-radius: 50%;
+          margin-right: 10px;
+        }
+        span {
+          font-size: 16x;
+          font-family: $subheading-font;
+          color: $primary-black-color;
+          @include transition(all 0.3s);
+        }
+        span:hover {
+          color: $primary-color;
+        }
+      }
+      .price {
+        display: inline-block;
+        .price-back {
+          display: block;
+          padding: 5px 15px;
+          background-color: #d4edda;
+          border-radius: 5px;
+          span {
+            color: #155724;
+          }
+        }
+      }
+    }
+  }
+  .all-courses-btn {
+    text-align: center;
+    margin-top: 50px;
+    .btn-warning {
+      color: $white;
+      background-color: $primary-color;
+      border-color: $primary-color;
+      padding: 13px 32px;
+      i {
+        color: $white;
+        font-size: 13px;
+        margin-left: 3px;
+      }
+    }
+  }
+}
+// parallax counter sect
+#parallax-counter {
+  .layout {
+    background-color: rgba(7, 41, 77, 0.7);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+  background-image: url(../others/img/counter_bg.jpg);
+  padding: 100px 0 70px 0;
+  background-position: center center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  position: relative;
+  width: 100%;
+  background-size: cover;
+  .parallax-icon {
+    img {
+      margin-bottom: 15px;
+    }
+  }
+  .numbers {
+    h3 {
+      color: $white;
+      font-family: $heading-font;
+      font-size: 29px;
+      font-weight: 500;
+      margin-bottom: 8px;
+      span {
+        color: $white;
+        font-family: $heading-font;
+        font-size: 30px;
+        font-weight: 500;
+        margin-bottom: 8px;
+      }
+    }
+    p {
+      color: $white;
+      font-family: $subheading-font;
+      font-size: 16px;
+    }
+  }
+}
+
+// upcoming events sect
+#upcoming-events {
+  padding: 100px 0;
+  .event-heading {
+    h2 {
+      color: $primary-black-color;
+      font-family: $heading-font;
+      font-weight: 500;
+      line-height: 1.2;
+      margin-bottom: 16px;
+      font-size: 32px;
+    }
+    p {
+      color: $primary-secondBlack;
+      font-family: $subheading-font;
+      margin-bottom: 16px;
+    }
+  }
+  .event-box {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    margin-top: 30px;
+    background-color: $white;
+    overflow: hidden;
+    &:hover .img-box img {
+      transform: scale(1.1);
+    }
+    .img-box {
+      position: relative;
+      img {
+        border-radius: 10px 10px 0 0;
+        @include transition(all 0.4s);
+      }
+      .event-date {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        max-width: 75px;
+        background-color: $white;
+        text-align: center;
+        width: 100%;
+        border-radius: 5px;
+        h4 {
+          font-size: 15px;
+          margin: 0;
+          padding: 5px;
+          font-family: $heading-font;
+          span {
+            font-size: 24px;
+            display: block;
+            font-family: $heading-font;
+            padding-bottom: 2px;
+          }
+        }
+        p {
+          padding: 5px;
+          display: block;
+          margin: 0;
+          font-size: 14px;
+          background-color: $primary-color;
+          border-radius: 0 0 5px 5px;
+          color: $white;
+          font-family: $heading-font;
+        }
+      }
+    }
+    .event-content {
+      padding: 15px;
+      h5 {
+        font-size: 18px;
+        margin-bottom: 10px;
+        cursor: pointer;
+        @include transition(all 0.3s);
+        &:hover {
+          color: $primary-color;
+        }
+      }
+      ul {
+        list-style: none;
+        padding: 0;
+        border-bottom: 1px solid #ddd;
+        padding-bottom: 10px;
+        li {
+          display: inline-block;
+          padding-right: 15px;
+          font-size: 15px;
+          i {
+            padding-right: 3px;
+          }
+          span {
+            font-size: 15px;
+            color: $primary-color;
+          }
+        }
+      }
+      p {
+        color: $primary-secondBlack;
+        font-family: $subheading-font;
+        text-align: left;
+        font-size: 16px;
+        margin: 0;
+      }
+    }
+  }
+}
+
+// form section
+#form-sect {
+  background-image: url(../others/img/pattern_bg.png);
+  background-color: #07294d;
+  background-size: cover;
+  background-position: center center;
+  padding-top: 100px;
+  .online-courses {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 8%;
+    border-radius: 10px;
+    .btn-warning {
+      background-color: $primary-color;
+      border-color: $primary-color;
+      color: $white;
+      padding: 11px 31px;
+      font-family: $subheading-font;
+    }
+    .free {
+      color: $white;
+      font-family: $heading-font;
+      font-size: 32px;
+    }
+    .yellow {
+      color: $primary-color;
+      font-family: $heading-font;
+      font-size: 32px;
+    }
+    p {
+      color: $white;
+      font-family: $subheading-font;
+      font-size: 16px;
+      margin: 14px 0 20px 0;
+    }
+    form {
+      color: $white;
+      .form-group {
+        color: $white;
+        margin-bottom: 16px;
+        input {
+          background-color: transparent;
+          border-color: $white;
+          padding: 23px 26px;
+          border-radius: 4px;
+          &::placeholder {
+            font-size: 16px;
+            color: $white;
+            font-family: $subheading-font;
+          }
+        }
+        textarea {
+          margin-top: 0px;
+          margin-bottom: 0px;
+          height: 82px;
+          background-color: transparent;
+          border-color: $white;
+          height: auto;
+          &::placeholder {
+            font-size: 16px;
+            color: $white;
+            font-family: $subheading-font;
+          }
+        }
+      }
+      .iconic-select {
+        position: relative;
+        i{
+          position: absolute;
+          top: 8px;
+          right: 11px;
+          font-size: 21px;
+          color: $white;
+        }
+        select {
+          -webkit-appearance: none;
+          -moz-appearance: none;
+          -ms-appearance: none;
+          -o-appearance: none;
+          appearance: none;
+        }
+        .iconic {
+          option {
+            color: $primary-black-color;
+            font-family: $subheading-font;
+            background-color: $white;
+          }
+          background-color: transparent;
+          &:first-child {
+            color: $white;
+            font-family: $subheading-font;
+          }
+        }
+      }
     }
   }
 }

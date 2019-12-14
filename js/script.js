@@ -37,46 +37,59 @@ $(document).ready(function () {
     // // search icon click function end
 
 
-   
+
 
 
   })
- 
-  // banner. 
- $('#carousel .carousel-item img').each(function () {
-  var imgSrc = $(this).attr('src');
-  $(this).parent().css({ 'background-image': 'url(' + imgSrc + ')' });
-  $(this).remove();
-});
 
-  
+  // banner. 
+  $('#carousel .carousel-item img').each(function () {
+    var imgSrc = $(this).attr('src');
+    $(this).parent().css({ 'background-image': 'url(' + imgSrc + ')' });
+    $(this).remove();
+  });
+
+
   //slick slider start
   $('.regular').slick({
     infinite: true,
     slidesToShow: 6,
-    slidesToScroll: 6
+    slidesToScroll: 1
+    , autoplay: true,
+    autoplaySpeed: 3000,
   });
   // slick slider end
 
 
   // why choose edu hover
-$("#w-ch-eduglobal .reason-box").hover(function(){
-  $(this).css("margin-top","4px")
-},function(){
-  $(this).css("margin-top","12px");
-})
+  $("#w-ch-eduglobal .reason-box").hover(function () {
+    $(this).css("margin-top", "4px")
+  }, function () {
+    $(this).css("margin-top", "12px");
+
+  })
+
+  // our courses hover
+
+  $("#our-courses-sect .course-box").hover(function () {
+  $(this).children().first().first().css("transform", "scale(1.1)")
+  }, function () {
+    $(this).children().first().first().css("transform", "scale(1)")
+  })
 
 
+  // counters
 
+  $('#about-us-sect .aboutus-part span').counterUp({
+    delay: 10,
+    time: 1000
+  });
 
-
-
-
-
-
-
-
-
-
+  $('#parallax-counter span').counterUp({
+    delay: 10,
+    time: 1000
+  });
+  
+  // counters end
 
 });
