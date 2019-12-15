@@ -80,6 +80,11 @@ $(document).ready(function () {
     delay: 10,
     time: 1000
   });
+
+  $('#parallax-counter-us-sect span').counterUp({
+    delay: 10,
+    time: 1000
+  });
   
   // counters end
 

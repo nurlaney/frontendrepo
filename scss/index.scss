@@ -651,6 +651,11 @@ body {
       border-color: $primary-color;
       padding: 13px 32px;
       position: relative;
+      a{
+        color: $white;
+        font-family: $heading-font;
+        text-decoration: none;
+      }
       i {
         color: $white;
         font-size: 13px;
@@ -1214,6 +1219,226 @@ body {
         color: $primary-secondBlack;
         font-family: $subheading-font;
         font-size: 16px;
+      }
+    }
+  }
+}
+
+
+// PAGES
+
+
+// about-us sect
+.page-banner {
+  background-image: url(../others/img/about_bg.jpg);
+  background-position: center center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  position: relative;
+  width: 100%;
+  background-size: cover;
+  padding: 100px;
+  .banner-layout {
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+  .title {
+    h1 {
+      font-size: 36px;
+      margin: 0;
+      font-family: $heading-font;
+      color: $white;
+      font-weight: bold;
+    }
+  }
+  .handmade-breadcrumb {
+    text-align: right;
+    a {
+      text-decoration: none;
+      p {
+        font-size: 16px;
+        color: $white;
+        font-family: $subheading-font;
+        display: inline-block;
+      }
+    }
+    span {
+      font-size: 16px;
+      color: $white;
+      font-family: $subheading-font;
+    }
+  }
+}
+
+// about us page counter
+#parallax-counter-us-sect {
+  background-color: #f7f7f7;
+  padding: 100px 0 70px 0;
+  position: relative;
+  .parallax-icon {
+    img {
+      margin-bottom: 15px;
+    }
+  }
+  .numbers {
+    h3 {
+      color: $primary-black-color;
+      font-family: $heading-font;
+      font-size: 29px;
+      font-weight: 500;
+      margin-bottom: 8px;
+      span {
+        color: $primary-black-color;
+        font-family: $heading-font;
+        font-size: 30px;
+        font-weight: 500;
+        margin-bottom: 8px;
+      }
+    }
+    p {
+      color: $primary-secondBlack;
+      font-family: $subheading-font;
+      font-size: 16px;
+    }
+  }
+}
+
+// our courses page
+#our-courses-page-sect {
+  padding: 50px 0 100px 0;
+  .course-box {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    background-color: $white;
+    border-radius: 10px;
+    margin-top: 30px;
+    overflow: hidden;
+    &:hover .course-img img {
+      transform: scale(1.1);
+    }
+    .course-img {
+      overflow: hidden;
+      img {
+        width: 100%;
+        border-radius: 10px 10px 0 0;
+        @include transition(all 0.3s);
+      }
+    }
+    .content-area {
+      padding: 15px;
+      h4 {
+        cursor: pointer;
+        color: $primary-black-color;
+        font-size: 18px;
+        font-family: $heading-font;
+        font-weight: 500;
+        @include transition(all 0.3s);
+      }
+      h4:hover {
+        color: $primary-color;
+      }
+      p {
+        margin-bottom: 10px;
+        color: $primary-secondBlack;
+        font-family: $subheading-font;
+        font-size: 16px;
+        font-weight: 400;
+        margin-bottom: 10px;
+      }
+      .rating-part {
+        .stars {
+          display: inline-block;
+          i {
+            color: $primary-color;
+            font-size: 13px;
+          }
+        }
+        .likes {
+          list-style: none;
+          float: right;
+          li {
+            display: inline;
+            i {
+              color: $primary-secondBlack;
+              @include transition(all 0.3s);
+            }
+            i:hover {
+              color: $primary-color;
+            }
+          }
+        }
+      }
+    }
+    .box-foot {
+      padding: 15px;
+      align-items: center;
+      justify-content: space-between;
+      display: flex;
+      margin: 1px;
+      border-top: 1px solid #ddd;
+      .foot-photo {
+        display: inline-block;
+        img {
+          max-width: 40px;
+          border-radius: 50%;
+          margin-right: 10px;
+        }
+        span {
+          font-size: 16x;
+          font-family: $subheading-font;
+          color: $primary-black-color;
+          @include transition(all 0.3s);
+        }
+        span:hover {
+          color: $primary-color;
+        }
+      }
+      .price {
+        display: inline-block;
+        .price-back {
+          display: block;
+          padding: 5px 15px;
+          background-color: #d4edda;
+          border-radius: 5px;
+          span {
+            color: #155724;
+          }
+        }
+      }
+    }
+  }
+  .page-numbers {
+    ul {
+      justify-content: center;
+      display: flex;
+      padding-top: 55px;
+      li {
+        margin-right: 5px;
+        list-style: none;
+        i {
+          vertical-align: middle;
+        }
+        a {
+          text-decoration: none;
+          border: 2px solid #dee2e6;
+          border-radius: 4px;
+          color: #888888;
+          height: 40px;
+          width: 40px;
+          text-align: center;
+          line-height: 36px;
+          padding: 8px 15px;
+          font-size: 18px;
+          @include transition(all 0.5s) ;
+          &:hover {
+            background-color: $primary-color;
+            color: $white;
+            border: 2px solid $primary-color;
+          }
+        }
       }
     }
   }
