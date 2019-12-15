@@ -69,15 +69,6 @@ $(document).ready(function () {
 
   })
 
-  // our courses hover
-
-  $("#our-courses-sect .course-box").hover(function () {
-  $(this).children().first().first().css("transform", "scale(1.1)")
-  }, function () {
-    $(this).children().first().first().css("transform", "scale(1)")
-  })
-
-
   // counters
 
   $('#about-us-sect .aboutus-part span').counterUp({
@@ -92,4 +83,16 @@ $(document).ready(function () {
   
   // counters end
 
+
+
+  // $('.student-slick').owlCarousel({
+  //   items:2,
+  //   loop:true,
+  //   margin:10,
+  //   autoplay:true,
+  //   autoplayTimeout:3000,
+  //   autoplayHoverPause:true
+  // });
+
+  
 });

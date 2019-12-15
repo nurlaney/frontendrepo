@@ -3,6 +3,8 @@
 @import "parts/extendtions";
 @import "components/mixins";
 @import "parts/header";
+@import "parts/footer";
+@import "parts/top-footer-layout";
 
 body {
   background-color: $white;
@@ -253,7 +255,45 @@ body {
             background-color: $primary-color;
           }
           .btn-outline-light {
+            position: relative;
             padding: 11px 26px;
+            border: 2px solid $white;
+            background-color: transparent;
+            &:hover {
+              color: $primary-color;
+            }
+            &::before {
+              display: block;
+              position: absolute;
+              top: 0;
+              right: 0;
+              height: 100%;
+              width: 0;
+              z-index: -1;
+              content: "";
+              background-color: $white;
+              @include transition(all 0.5s);
+            }
+            &::after {
+              content: "Learn More";
+              position: absolute;
+              height: 0%;
+              left: -25%;
+              top: 24%;
+              width: 150%;
+              z-index: -1;
+              @include transition(all 0.5s);
+            }
+            &:hover::before {
+              left: 0%;
+              right: initial;
+              width: 100%;
+              z-index: 1;
+            }
+            &:hover::after {
+              z-index: 1;
+              color: $primary-color;
+            }
           }
           position: absolute;
           text-align: center;
@@ -508,12 +548,15 @@ body {
     border-radius: 10px;
     margin-top: 30px;
     overflow: hidden;
+    &:hover .course-img img {
+      transform: scale(1.1);
+    }
     .course-img {
       overflow: hidden;
-      @include transition(all 0.3s);
       img {
         width: 100%;
         border-radius: 10px 10px 0 0;
+        @include transition(all 0.3s);
       }
     }
     .content-area {
@@ -607,10 +650,28 @@ body {
       background-color: $primary-color;
       border-color: $primary-color;
       padding: 13px 32px;
+      position: relative;
       i {
         color: $white;
         font-size: 13px;
         margin-left: 3px;
+      }
+      &::before {
+        content: "";
+        background-color: rgba(255, 255, 255, 0.46);
+        height: 100%;
+        width: 32px;
+        display: block;
+        position: absolute;
+        top: 0;
+        left: -72px;
+        -webkit-transform: skewX(-45deg) translateX(0);
+        transform: skewX(-45deg) translateX(0);
+        @include transition(all 0.7s);
+      }
+      &:hover::before {
+        -webkit-transform: skewX(-45deg) translateX(40em);
+        transform: skewX(-45deg) translateX(620px);
       }
     }
   }
@@ -690,6 +751,7 @@ body {
     }
     .img-box {
       position: relative;
+      overflow: hidden;
       img {
         border-radius: 10px 10px 0 0;
         @include transition(all 0.4s);
@@ -833,7 +895,7 @@ body {
       }
       .iconic-select {
         position: relative;
-        i{
+        i {
           position: absolute;
           top: 8px;
           right: 11px;
@@ -859,6 +921,299 @@ body {
             font-family: $subheading-font;
           }
         }
+      }
+    }
+  }
+}
+
+// student-say sect
+#student-say {
+  padding: 100px 0;
+  .event-heading {
+    h2 {
+      color: $primary-black-color;
+      font-family: $heading-font;
+      font-weight: 500;
+      line-height: 1.2;
+      margin-bottom: 16px;
+      font-size: 32px;
+    }
+    p {
+      color: $primary-secondBlack;
+      font-family: $subheading-font;
+      margin-bottom: 46px;
+    }
+  }
+  .student-slider {
+    background-color: $white;
+    box-shadow: 0 0px 5px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    padding: 0px 12px 9px 46px;
+    margin: 5px 5px 5px 50px;
+    position: relative;
+    &::before {
+      content: "\f10e";
+      position: absolute;
+      right: 40px;
+      top: 0;
+      font-family: "FontAwesome";
+      font-size: 190px;
+      line-height: normal;
+      font-weight: 900;
+      color: rgba(0, 0, 0, 0.02);
+    }
+    .slider-item {
+      margin-left: 12px;
+      .img {
+        display: inline-block;
+        img {
+          position: absolute;
+          left: -60px;
+          border-radius: 5px;
+        }
+      }
+      .slider-item-content {
+        .name {
+          margin-bottom: 6px;
+          h6 {
+            font-size: 16px;
+            font-family: $heading-font;
+            font-weight: 500;
+            color: $primary-black-color;
+          }
+          span {
+            font-style: italic;
+            color: $primary-color;
+            font-family: $subheading-font;
+          }
+        }
+        .desc {
+          p {
+            color: $primary-secondBlack;
+            font-family: $heading-font;
+          }
+        }
+      }
+    }
+  }
+}
+
+// our-blog sect
+#our-blog {
+  .all-blog-btn {
+    text-align: center;
+    margin-top: 50px;
+    .btn-warning {
+      color: $white;
+      background-color: $primary-color;
+      border-color: $primary-color;
+      padding: 13px 32px;
+      position: relative;
+      &::before {
+        content: "";
+        background-color: rgba(247, 247, 247, 0.75);
+        height: 100%;
+        width: 32px;
+        display: block;
+        position: absolute;
+        top: 0;
+        left: -72px;
+        -webkit-transform: skewX(-45deg) translateX(0);
+        transform: skewX(-45deg) translateX(0);
+        @include transition(all 0.7s);
+      }
+      &:hover::before {
+        -webkit-transform: skewX(-45deg) translateX(40em);
+        transform: skewX(-45deg) translateX(620px);
+      }
+      i {
+        color: $white;
+        font-size: 13px;
+        margin-left: 3px;
+      }
+    }
+  }
+  padding: 100px 0;
+  background-color: rgb(247, 247, 247);
+  .event-heading {
+    h2 {
+      color: $primary-black-color;
+      font-family: $heading-font;
+      font-weight: 500;
+      line-height: 1.2;
+      margin-bottom: 16px;
+      font-size: 32px;
+    }
+  }
+  .event-box {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    background-color: $white;
+    border-radius: 10px;
+    margin-top: 30px;
+    &:hover .img-box::before {
+      opacity: 1;
+    }
+    .img-box {
+      overflow: hidden;
+      position: relative;
+      &::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        opacity: 0;
+        background-color: rgba(0, 0, 0, 0.5);
+        opacity: 0;
+        border-radius: 10px 10px 0 0;
+        @include transition(all 0.5s);
+      }
+      img {
+        width: 100%;
+        border-radius: 10px 10px 0 0;
+      }
+    }
+  }
+  .event-content {
+    padding: 15px;
+    h5 {
+      font-size: 16px;
+      font-family: $heading-font;
+      color: $primary-black-color;
+      font-weight: 500;
+      @include transition(all 0.4s);
+      &:hover {
+        color: $primary-color;
+      }
+    }
+    p {
+      margin-bottom: 10px;
+      color: $primary-secondBlack;
+      font-family: $subheading-font;
+    }
+    span {
+      color: $primary-black-color;
+      font-weight: 400;
+      font-size: 16px;
+      @include transition(all 0.4s);
+      &:hover {
+        color: $primary-color;
+      }
+    }
+  }
+  ul {
+    padding: 15px;
+    border-top: 1px solid #ddd;
+    li {
+      display: inline;
+      i {
+        color: $primary-color;
+        font-size: 15px;
+        margin-right: 5px;
+      }
+      span {
+        font-size: 14px;
+        color: $primary-secondBlack;
+        font-family: $subheading-font;
+        margin-right: 8px;
+        @include transition(all 0.4s);
+        &:hover {
+          color: $primary-color;
+        }
+      }
+    }
+  }
+}
+
+// our-client sect
+#our-client {
+  .slider {
+    .box {
+      .item {
+        img {
+          margin: 0 auto;
+          width: auto;
+          opacity: 0.7;
+          padding: 0 10px;
+          max-width: 100%;
+        }
+      }
+    }
+  }
+  padding: 100px 0;
+  .standart-headings {
+    h2 {
+      color: $primary-black-color;
+      font-family: $heading-font;
+      font-weight: 500;
+      line-height: 1.2;
+      margin-bottom: 16px;
+      font-size: 32px;
+    }
+    p {
+      color: $primary-secondBlack;
+      font-family: $subheading-font;
+      margin-bottom: 46px;
+    }
+  }
+}
+
+// our teachers sect
+#our-teachers {
+  padding: 100px 0;
+  background-image: url(../others/img/teacher_bg.jpg);
+  padding: 100px 0 70px 0;
+  background-position: center center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  position: relative;
+  width: 100%;
+  background-size: cover;
+  &::before {
+    background-color: rgba(7, 41, 77, 0.9);
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    content: "";
+  }
+  .standart-headings {
+    h2 {
+      color: $white;
+      font-family: $heading-font;
+      font-weight: 500;
+      line-height: 1.2;
+      margin-bottom: 16px;
+      font-size: 32px;
+    }
+    p {
+      color: $white;
+      font-family: $subheading-font;
+      padding-bottom: 25px;
+    }
+  }
+  .teacher-box {
+    .teacher-img {
+      img {
+        border-radius: 10px 10px 0 0;
+      }
+    }
+    .teacher-name {
+      background-color: white;
+      text-align: center;
+      padding: 15px;
+      border-radius: 0 0 10px 10px;
+      h4 {
+        font-family: $heading-font;
+        font-size: 20px;
+        color: $primary-black-color;
+      }
+      span {
+        color: $primary-secondBlack;
+        font-family: $subheading-font;
+        font-size: 16px;
       }
     }
   }
